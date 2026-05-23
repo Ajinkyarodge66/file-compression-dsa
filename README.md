@@ -124,4 +124,7 @@ Computer Science Student
 
 Give it a ⭐ on GitHub and share it!
 
+
+java -jar file-compression-2.0-SNAPSHOT-jar-with-dependencies.jarjava -jar target/file-compression-2.0-SNAPSHOT-jar-with-dependencies.jar```![Outlook](/git_resource/readmeScreenshot.png?raw=true "File Compression GUI")
+0 commit commentsComments0 (0)Lock conversation
 ---
