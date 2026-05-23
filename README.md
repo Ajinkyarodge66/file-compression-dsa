@@ -1,72 +1,127 @@
-# File Compression
 
-[![CI](https://github.com/ayonious/File-Compression/actions/workflows/ci.yml/badge.svg)](https://github.com/ayonious/File-Compression/actions/workflows/ci.yml)
-[![codecov](https://codecov.io/gh/ayonious/File-Compression/branch/master/graph/badge.svg)](https://codecov.io/gh/ayonious/File-Compression)
-[![GitHub stars](https://img.shields.io/github/stars/ayonious/File-Compression?style=social)](https://github.com/ayonious/File-Compression/stargazers)
+# 📦 File Compression System (Huffman + LZW)
 
-A File Compression software that helps zip/Unzip files using these 2 algorithms:
+## 🚀 Overview
 
-1. Huffmans Code
-2. Lempel-Ziv-Wells algorithm
+This project is a **File Compression and Decompression System** implemented in Java using advanced Data Structures and Algorithms.
 
-# About Huffmans Code
+It supports **Huffman Coding** and **LZW Compression**, two widely used lossless compression techniques. The application provides a simple GUI to compress and decompress files efficiently.
 
-The Huffmans algo creates a 1-1 mapping for each byte of the input file 
-and replaces each byte with the mapped bit sequence. For this you need 
-to store a dictionary that describes each 1-1 mapping of input byte and
-binary sequence.(which needs extraspace)
+---
 
-# About Lempel-Ziv-Wells
+## 🎯 Features
 
-Unlike Huffmans code LZW dont need an extra dictionary to be saved. Also
-LZW does not create a mapping to byte to bin sequence. It creates mapping
-of multiple byte to binary sequence.
+* ✅ File Compression using Huffman Coding
+* ✅ File Compression using LZW Algorithm
+* ✅ File Decompression Support
+* ✅ GUI-based interface (Java Swing)
+* ✅ Supports multiple file formats (.txt, .docx, etc.)
+* ✅ Efficient binary encoding and decoding
 
-## Installation
+---
 
-### Prerequisites
-- Java 21 or higher
-- Maven (for building)
+## 🧠 Algorithms Used
 
-<details>
-<summary> Installing Maven (click to expand)</summary>
+### 🔹 Huffman Coding
 
-On macOS:
+* Greedy Algorithm
+* Uses Binary Tree
+* Assigns shorter codes to frequent characters
+
+### 🔹 LZW Compression
+
+* Dictionary-based compression
+* Dynamic encoding
+* Efficient for repeated patterns
+
+---
+
+## 🛠️ Tech Stack
+
+* Java
+* Maven
+* Data Structures & Algorithms
+* File Handling
+* Java Swing (GUI)
+
+---
+
+## ⚙️ How to Run
+
+### Step 1: Clone the repository
+
 ```bash
-brew install maven
+git clone https://github.com/Ajinkyarodge66/file-compression-dsa.git
+cd file-compression-dsa
 ```
 
-Verify installation:
-```bash
-mvn -version
-```
-</details>
+### Step 2: Build project
 
-## Building and Running
-
-### Directly Run the jar file
-I have included the already build jar file. You can run it simply if you dont want to build
 ```bash
-java -jar file-compression-2.0-SNAPSHOT-jar-with-dependencies.jar
+mvn clean install
 ```
 
+### Step 3: Run application
 
-### Build and Run the project Using Maven
 ```bash
-mvn clean package
-mvn test
 mvn exec:java
 ```
 
-### Using JAR directly
-After building with Maven, you can run the JAR:
-```bash
-java -jar target/file-compression-2.0-SNAPSHOT-jar-with-dependencies.jar
-```
+---
 
-![Outlook](/git_resource/readmeScreenshot.png?raw=true "File Compression GUI")
+## 📌 How to Use
 
-## Testing environment:
+### 🔹 Compression
 
-I tested this project in:
-MacOS Tahoe (version 26.0.1)
+1. Select a file (e.g., `.txt`, `.docx`)
+2. Choose algorithm (Huffman / LZW)
+3. Compressed file will be generated
+
+### 🔹 Decompression (IMPORTANT)
+
+* Select the **compressed file only**
+
+  * `.huffz` (Huffman)
+  * `.LmZWp` (LZW)
+* ❌ Do NOT select original file
+
+---
+
+## 📊 Example
+
+| Operation  | Input File      | Output File     |
+| ---------- | --------------- | --------------- |
+| Compress   | file.docx       | file.docx.huffz |
+| Decompress | file.docx.huffz | file.docx       |
+
+---
+
+## ⚠️ Known Issues
+
+* Compression ratio calculation may show incorrect values (can be improved)
+* Limited support for very large files
+
+---
+
+## 🚀 Future Improvements
+
+* Add drag & drop UI
+* Improve compression ratio accuracy
+* Support images and binary files
+* Add real-time compression statistics
+* Web-based version
+
+---
+
+## 👨‍💻 Author
+
+**Ajinkya Asaram Rodge**
+Computer Science Student
+
+---
+
+## ⭐ If you like this project
+
+Give it a ⭐ on GitHub and share it!
+
+---
